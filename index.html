@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>INVOKE()</title>
+    <link rel="stylesheet" href="new.css">
+    <style>
+        body{
+            background-color: rgba(170, 177, 178, 0.871);
+        }
+        #loader{
+                width:50px;
+                height:50px;
+                border-width:5px;
+                
+                border-color:black;
+                
+                border-top-color: blue;
+                border-style: solid;
+                background-color:rgb(0, 0, 0);
+                animation: spin  ease-in ;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-iteration-count: infinite;
+                
+                border-radius: 50%;
+                position:absolute;
+                left:50%;
+                top:40vh;
+            }
+            @keyframes spin{
+                100%{
+                    transform: rotate(360deg);
+                    
+                }
+       
+        }
+    </style>
+   
+</head>
+<body id="body">
+    <div id="loader" ></div>
+    <div id="contentx">
+    <nav>
+        <li id="home" >Home</li> 
+        <li id="post">Post Your Own Innovation</li>
+        <li id="search">
+            <form action="http://localhost:1001/subject" method="post">
+                <input type="text" id="subject" name="subject" placeholder="Search">
+            </form>
+        </li>
+    </nav>
+    
+    <div class="cover">
+        <h1 style="width: 100%;">content1</h1>
+    </div>
+
+    <div class="content1">
+        <div class="header">
+            <h1>Say Hello to the <span style="color:rgb(153, 130, 89)">World</span> Of Innovation</h1>
+        </div>
+    </div>
+    <div>
+        </div>
+        <div>
+    <div id="content21">
+        <div class="header2">
+            <h1>Study<span style="color:rgb(196, 96, 96)">Mathematics</span></h1>
+        </div>
+        <div class="askmath">
+            <form action="http://localhost:1001/field/Mathematics" method="post">
+            <input type="text" name="subject" id="Mathematics" placeholder="Search">
+        </form>
+    </div>
+    </div>
+    <div id="content3">
+        <div class="header3">
+            <h1>Study<span style="color:rgb(196, 96, 96)">Biology</span></h1>
+        </div>
+        <div class="askmath">
+            <form action="http://localhost:1001/field/Biology" method="post" id="biothfields" name="biofields">
+            <input type="text" name="subject" id="bio" placeholder="Search">
+        </form>
+    </div>
+    </div>
+    <div id="content4">
+        <div class="header4">
+            <h1>Study<span style="color:rgb(196, 96, 96)">Chemistry</span></h1>
+        </div>
+        <div class="askmath">
+            <form action="http://localhost:1001/field/Chemistry"method="post" id="chemthfields" name="chemfields">
+            <input type="text" name="subject" id="chem" placeholder="Search">
+        </form>
+    </div>
+    </div>
+
+    <div id="content5">
+        <div class="header5">
+            <h1>Study<span style="color:rgb(196, 96, 96)">Computer Science</span></h1>
+        </div>
+        <div class="askmath">
+            <form action="http://localhost:1001/field/Computer-Science" method="post" id="compthfields" name="comfields">
+            <input type="text" name="subject" id="comp" placeholder="Search">
+        </form>
+    </div>
+    </div>
+    <div id="model">
+        <h2 class="headsec" style="text-decoration: underline;text-underline-offset: 1.5vh;">Make Your Own Post</h2>
+        <button onclick="post()">+</button>
+    </div>
+    </div>
+</body>
+<script>
+    document.getElementById("post").addEventListener('click',post);
+    function post(){
+        window.open("./publish.html",'_blank');
+    }
+</script>
+<script src="style.js"></script>
+<script src="try.js"></script>
+</html>
+
